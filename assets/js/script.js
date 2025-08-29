@@ -55,6 +55,33 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
+// QR Code Modal variables
+const qrCodeThumbnail = document.querySelector("[data-qr-code]");
+const qrModalContainer = document.querySelector("[data-qr-modal-container]");
+const qrModalCloseBtn = document.querySelector("[data-qr-modal-close-btn]");
+const qrModalOverlay = document.querySelector("[data-qr-modal-overlay]");
+
+// QR modal toggle function
+const qrModalFunc = function () {
+  qrModalContainer.style.display = qrModalContainer.style.display === "none" ? "block" : "none";
+}
+
+// add click event to QR code thumbnail
+if (qrCodeThumbnail) {
+  qrCodeThumbnail.addEventListener("click", qrModalFunc);
+}
+
+// add click event to QR modal close button and overlay
+if (qrModalCloseBtn) {
+  qrModalCloseBtn.addEventListener("click", qrModalFunc);
+}
+
+if (qrModalOverlay) {
+  qrModalOverlay.addEventListener("click", qrModalFunc);
+}
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
