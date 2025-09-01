@@ -1879,4 +1879,128 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+  /**
+   * CERTIFICATIONS
+   */
+
+  .certifications { margin-bottom: 35px; }
+
+  .certifications-title { margin-bottom: 20px; }
+
+  .certifications-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .certification-item {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    border: 1px solid var(--jet);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+  }
+
+  .certification-item::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(180deg, var(--eerie-black-1), var(--eerie-black-2));
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .certification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .certification-icon-box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--border-gradient-onyx);
+    border: 1px solid var(--jet);
+    border-radius: 12px;
+  }
+
+  .certification-info {
+    flex: 1;
+  }
+
+  .certification-title {
+    color: var(--white-2);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-500);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .certification-issuer {
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-500);
+    margin-bottom: 5px;
+  }
+
+  .certification-date {
+    color: var(--light-gray-70);
+    font-size: var(--fs-7);
+    margin-bottom: 12px;
+  }
+
+  .certification-description {
+    color: var(--light-gray-70);
+    font-size: var(--fs-6);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .certification-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-500);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+
+  .certification-link:hover {
+    color: var(--white-2);
+  }
+
+  .certification-link ion-icon {
+    font-size: 16px;
+  }
+
+  /**
+   * RESPONSIVE CERTIFICATIONS
+   */
+
+  @media (min-width: 580px) {
+    .certifications-list { grid-template-columns: 1fr; }
+  }
+
+  @media (min-width: 768px) {
+    .certification-content {
+      gap: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .certifications-list { grid-template-columns: 1fr; }
+  }
+
+  @media (min-width: 1200px) {
+    .certifications-list { grid-template-columns: 1fr; }
+  }
+
 }
